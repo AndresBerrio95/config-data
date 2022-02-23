@@ -3,6 +3,10 @@ server:
   servlet:
     context-path: /ppi/v2
 spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:9040
   application:
     name: booking-service
   h2:
@@ -20,4 +24,12 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:9010/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
 
