@@ -15,7 +15,7 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/ppi/v2/users/**
-        - id: movies-service
+        - id: movie-service
           uri: lb://movies-service
           predicates:
             - Path=/ppi/v2/movies/**
